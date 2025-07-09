@@ -30,10 +30,9 @@ void enable_raw_mode() {
 
 	struct termios raw = orig_termios;
 
-	// tutte le costanti si trovano sul manuale di termios
-	// le costanti CS8, ISTRIP, INPCK e BKRINP sono meno importanti
-	// e messe solo per casi specifici che non vanno ad impattare 
-	// in modo pesante
+	// all consts are present in the termios man
+	// CS8, ISTRIP, INPCK e BKRINP are less important and are there just for
+	// specific and small cases
 	raw.c_iflag &= ~(IXON | ICRNL | INPCK | BRKINT | ISTRIP);	
 	raw.c_oflag &= ~(OPOST);
 	raw.c_cflag |= (CS8);
