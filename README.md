@@ -1,1 +1,1 @@
-# recreation of antirez's text editor (WIP)
+# reproducing antirez's text editor (WIP)
